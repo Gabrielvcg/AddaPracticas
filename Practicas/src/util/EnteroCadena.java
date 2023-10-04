@@ -1,4 +1,4 @@
-package ejercicios;
+package util;
 
 public record EnteroCadena(Integer a, String s) {
 	

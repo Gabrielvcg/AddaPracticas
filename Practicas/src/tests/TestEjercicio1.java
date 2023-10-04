@@ -12,7 +12,7 @@ public class TestEjercicio1 {
 
             List<String> lineas = Files2.linesFromFile(archivoEntrada);
 			        
-			String[] valores =lineas.get(0).split(",");
+			String[] valores =lineas.get(1).split(",");
 			Integer varA = Integer.parseInt(valores[0]);
 			Integer varB = Integer.parseInt(valores[1]);       
             

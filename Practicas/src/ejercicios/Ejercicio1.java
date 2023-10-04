@@ -4,6 +4,8 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import util.EnteroCadena;
+
 public class Ejercicio1 {
 
 	
@@ -49,11 +51,6 @@ public class Ejercicio1 {
 	
 	public static String ejercicio1Recursivo(Integer varA, Integer varB) {
 		
-		return ejercicio1RecursivoAux(varA, varB, EnteroCadena.of(varA, "A"), "");
-		
-	}
-	
-	public static String ejercicio1RecursivoAux(Integer varA, Integer varB, EnteroCadena e, String result) {
 		UnaryOperator<EnteroCadena> nx = elem ->
 		{
 		return EnteroCadena.of(elem.a()+3,
@@ -62,6 +59,13 @@ public class Ejercicio1 {
 		elem.a()+"!");
 		};
 		
+		return ejercicio1RecursivoAux(nx, varA, varB, EnteroCadena.of(varA, "A"), "");
+		
+	}
+	
+	public static String ejercicio1RecursivoAux(UnaryOperator<EnteroCadena> nx, Integer varA, Integer varB,
+			EnteroCadena e, String result) {
+
 		if (e.a() >= varB) {
 			return result;
 		} else {
@@ -69,20 +73,15 @@ public class Ejercicio1 {
 			if (e.a() % 10 != 0) {
 
 				if (result.length() == 0) {
-					result = ejercicio1RecursivoAux(varA, varB, nx.apply(e), result + e.s());
+					result = result + e.s();
 
 				} else {
-					result = ejercicio1RecursivoAux(varA, varB, nx.apply(e), result + "-" + e.s());
+					result = result + "-" + e.s();
 
 				}
+				result = ejercicio1RecursivoAux(nx, varA, varB, nx.apply(e), result);
 			}
 		}
 		return result;
 	}
-	}
-		
-		
-		
-	
-
-
+}
