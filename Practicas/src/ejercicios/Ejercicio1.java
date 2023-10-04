@@ -62,7 +62,7 @@ public class Ejercicio1 {
 		return ejercicio1RecursivoAux(nx, varA, varB, EnteroCadena.of(varA, "A"), "");
 		
 	}
-	
+
 	public static String ejercicio1RecursivoAux(UnaryOperator<EnteroCadena> nx, Integer varA, Integer varB,
 			EnteroCadena e, String result) {
 
@@ -79,8 +79,9 @@ public class Ejercicio1 {
 					result = result + "-" + e.s();
 
 				}
-				result = ejercicio1RecursivoAux(nx, varA, varB, nx.apply(e), result);
 			}
+			result = ejercicio1RecursivoAux(nx, varA, varB, nx.apply(e), result);
+
 		}
 		return result;
 	}
