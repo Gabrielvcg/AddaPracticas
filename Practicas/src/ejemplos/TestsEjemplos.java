@@ -9,8 +9,11 @@ import us.lsi.streams.Stream2;
 
 public class TestsEjemplos {
 	public static void main(String[] args) {
+			System.out.println("Primer ejemplo\n");
 			testsEjemplo1();
+			System.out.println("Segundo ejemplo\n");
 			testsEjemplo2();
+			System.out.println("Tercer ejemplo\n");
 			testsEjemplo3();
 		}
 
@@ -19,7 +22,7 @@ public class TestsEjemplos {
 				String[] v = s.split(",");
 				return Punto2D.of(Double.valueOf(v[0]), Double.valueOf(v[1]));
 			};
-			String file = "./ficheros/PI1Ej1DatosEntrada.txt";
+			String file = "./ficheros ejemplos/Ejemplo1DatosEntrada.txt";
 			List<Punto2D> ls = Stream2.file(file).map(parsePunto).toList();
 			// Explicar diferencia entre Stream2.file(_) y Files2.streamFromFile(_)
 
@@ -30,7 +33,7 @@ public class TestsEjemplos {
 		}
 		
 		public static void testsEjemplo2() {
-			String file = "./ficheros/PI1Ej2DatosEntrada.txt";
+			String file = "./ficheros ejemplos/Ejemplo2DatosEntrada.txt";
 			List<Pair<Integer,Integer>> ls = Stream2.file(file)
 					.map(s -> Pair.parse(s,",",s1->Integer.parseInt(s1),s2->Integer.parseInt(s2)))
 					.toList();
@@ -47,7 +50,7 @@ public class TestsEjemplos {
 		}
 		
 		public static void testsEjemplo3() {
-			String file = "./ficheros/PI1Ej3DatosEntrada1A.txt";
+			String file = "./ficheros ejemplos/Ejemplo3DatosEntrada.txt";
 			List<Pair<Integer,Integer>> ls = Stream2.file(file)
 					.map(s -> Pair.parse(s,",",s1->Integer.parseInt(s1),s2->Integer.parseInt(s2)))
 					.toList();
