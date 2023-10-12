@@ -30,6 +30,15 @@ public static void main(String[] args) {
         List<String> resultadoIterativo1 = Ejercicio3.ejercicio3Iterativo(lineas1A, lineas1B);
         List<String> resultadoIterativo2 = Ejercicio3.ejercicio3Iterativo(lineas2A, lineas2B);
         List<String> resultadoIterativo3 = Ejercicio3.ejercicio3Iterativo(lineas3A, lineas3B);
+        
+        List<String> resultadoRecursivo1 = Ejercicio3.ejercicio3Recursivo(lineas1A, lineas1B);
+        List<String> resultadoRecursivo2 = Ejercicio3.ejercicio3Recursivo(lineas2A, lineas2B);
+        List<String> resultadoRecursivo3 = Ejercicio3.ejercicio3Recursivo(lineas3A, lineas3B);
+      
+        List<String> resultadoFuncional1 = Ejercicio3.ejercicio3Funcional(lineas1A, lineas1B);
+        List<String> resultadoFuncional2 = Ejercicio3.ejercicio3Funcional(lineas2A, lineas2B);
+        List<String> resultadoFuncional3 = Ejercicio3.ejercicio3Funcional(lineas3A, lineas3B);
+
 
         
         // List<Integer> resultadoFuncional = Ejercicio2.ejercicio2Funcional(a, b);
@@ -42,6 +51,19 @@ public static void main(String[] args) {
         System.out.println("Resultado Iterativo 1: " + resultadoIterativo1);
         System.out.println("Resultado Iterativo 2: " + resultadoIterativo2);
         System.out.println("Resultado Iterativo 3: " + resultadoIterativo3);
+        
+        System.out.println();
+        
+        System.out.println("Resultado Recursivo 1: " + resultadoRecursivo1);
+        System.out.println("Resultado Recursivo 2: " + resultadoRecursivo2);
+        System.out.println("Resultado Recursivo 3: " + resultadoRecursivo3);
+        // System.out.println("Resultado Funcoinal: " + resultadoFuncional);
+
+        System.out.println();
+        
+         System.out.println("Resultado Funcional 1: " + resultadoFuncional1);
+         System.out.println("Resultado Funcional 2: " + resultadoFuncional2);
+         System.out.println("Resultado Funcional 3: " + resultadoFuncional3);
         // System.out.println("Resultado Funcoinal: " + resultadoFuncional);
 
         System.out.println();
