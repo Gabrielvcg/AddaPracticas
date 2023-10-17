@@ -23,10 +23,14 @@ public class Ejercicio3 {
 			} else if (i == a.size() - 1) {
 				ac.add(a.get(i));
 				ac.addAll(b.subList(j, b.size()));
+				i++;
+				j=b.size();
 
 			} else if (j == b.size() - 1) {
 				ac.add(b.get(j));
 				ac.addAll(a.subList(j, a.size()));
+				j++;
+				i=a.size();
 			}
 
 			else if (i == a.size()) {
@@ -103,7 +107,9 @@ public class Ejercicio3 {
 			ac.add(a.get(i + 1));
 			ac.add(b.get(j));
 			ac.add(b.get(j + 1));
-			return of(a, b, ac, i + 2, j + 2);
+			Tupla t= of(a, b, ac, i , j);
+			t= of(a, b, ac, i +2, j+2);
+			return t;
 
 		}
 
@@ -134,8 +140,8 @@ public class Ejercicio3 {
 	public static List<String> ejercicio3Funcional(List<String> a, List<String> b) {
 		Tupla t = Stream
 				.iterate(Tupla.first(a, b),
-						e -> e.i() < e.a().size() - 2 && e.j() < e.b().size() - 2 ? e.next1() : e.next2())
-				.filter(e -> !(e.i() < e.a().size() - 1 || e.j() < e.b().size() - 1)).findFirst().get();
+						e -> e.i() < e.a().size() - 1 && e.j() < e.b().size() -1  ? e.next1() : e.next2())
+				.filter(e -> !(e.i() < e.a().size() -1  || e.j() < e.b().size()-1 )).findFirst().get();
 
 		return t.ac();
 	}
