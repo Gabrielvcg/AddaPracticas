@@ -59,7 +59,7 @@ public class Ejercicio4 {
 				}else if (j <= 4) {
 					v = j.toString()+"-"+i.toString();
 				} else {
-					v = map.get(IntPair.of(i/2, j-2)) +","+ map.get(IntPair.of(i-3, j/2))+","+ map.get(IntPair.of(i-1, j-1));
+					v = map.get(IntPair.of(i/2, j-2)) +","+ map.get(IntPair.of(i-2, j/2))+","+ map.get(IntPair.of(i-1, j-1));
 				}
 				map.put(IntPair.of(i, j), v);
 			}
