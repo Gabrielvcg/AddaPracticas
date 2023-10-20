@@ -24,8 +24,6 @@ public static void main(String[] args) {
         String resultadoIterativo = Ejercicio4.ejercicio4Iterativo(a, b);
 
         // Imprimir los resultados
-       // System.out.println("Resultado Funcional: " + resultadoFuncional);
-        //System.out.println("Resultado Iterativo: " + resultadoIterativo);
         System.out.println("Resultado Recursivo sin memoria: " + resultadoRecursivoSinMemoria);
         System.out.println("Resultado Recursivo final con memoria: " + resultadoRecursivoConMemoria);
         System.out.println("Resultado Iterativo: " + resultadoIterativo);

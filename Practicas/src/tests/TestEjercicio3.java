@@ -46,14 +46,12 @@ public static void main(String[] args) {
         System.out.println("Resultado Recursivo 1: " + resultadoRecursivo1);
         System.out.println("Resultado Recursivo 2: " + resultadoRecursivo2);
         System.out.println("Resultado Recursivo 3: " + resultadoRecursivo3);
-        // System.out.println("Resultado Funcoinal: " + resultadoFuncional);
 
         System.out.println();
         
          System.out.println("Resultado Funcional 1: " + resultadoFuncional1);
          System.out.println("Resultado Funcional 2: " + resultadoFuncional2);
          System.out.println("Resultado Funcional 3: " + resultadoFuncional3);
-        // System.out.println("Resultado Funcoinal: " + resultadoFuncional);
 
         System.out.println();
 		}

@@ -136,7 +136,6 @@ public class Ejercicio3 {
 		}
 
 	}
-//CUIDADO POR ALGUN MOTIVO SALE BUCLE INFINITO O ERROR QUE TRABA EL PROGRAMA
 	public static List<String> ejercicio3Funcional(List<String> a, List<String> b) {
 		Tupla t = Stream
 				.iterate(Tupla.first(a, b),
@@ -146,20 +145,6 @@ public class Ejercicio3 {
 		return t.ac();
 	}
 
-	// otra opcion que parece menos engorrosa, pero para el recursivo no se pasa
-	// directamente
-	/*
-	 * public static List<String> ejercicio3Iterativo2(List<String> a, List<String>
-	 * b) { List<String> ac = new ArrayList<>(); int i = 0; int j = 0;
-	 * 
-	 * while (i < a.size() && j < b.size()) { ac.add(a.get(i)); ac.add(a.get(i +
-	 * 1)); ac.add(b.get(j)); ac.add(b.get(j + 1)); i += 2; j += 2; }
-	 * 
-	 * while (i < a.size()) { ac.add(a.get(i)); i++; }
-	 * 
-	 * while (j < b.size()) { ac.add(b.get(j)); j++; }
-	 * 
-	 * return ac; }
-	 */
+
 
 }
