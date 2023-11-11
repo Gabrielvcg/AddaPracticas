@@ -5,11 +5,10 @@ import java.math.BigInteger;
 public class Ejercicio1 {
 
 	public static Double ejercicio1RecursivoD(Double a) {
-		Double ac;
-		if (a < 6) {
-			ac = 10.;
-		} else {
-			ac = Math.pow(a, 3) * ejercicio1RecursivoD(a - 1);
+		Double ac=0.;
+		while(a>0) {
+			ac+=1;
+			a--;
 		}
 		return ac;
 	}

@@ -15,15 +15,18 @@ import us.lsi.curvefitting.PowerLog;
 import us.lsi.graphics.MatPlotLib;
 
 public class TestEjercicio1 {
-	
-	private static Integer nMin = 100; // n mínimo para el cálculo de la función
-	private static Integer nMax = 100000; // n máximo para el cálculo de funcion
-	private static Integer nIncr = 2330; // incremento en los valores de n del cálculo 
-	private static Integer nIter = 150; // número de iteraciones para cada medición de tiempo
+	 
+	private static Integer nMin = 1000; // n mínimo para el cálculo de potencia
+	private static Integer nMax = 100000; // n máximo para el cálculo de potencia
+//	private static Integer nIncr = 1000; // incremento en los valores de n del cálculo de potencia
+	private static Integer nIncr = 3330; // incremento en los valores de n del cálculo de potencia
+	private static Integer nIter = 50; // número de iteraciones para cada medición de tiempo
+//	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
 	private static Integer nIterWarmup = 10000; // número de iteraciones para warmup
 	
-	private static Double RD = 100.;
-	private static BigInteger RBI = new BigInteger("100");
+
+	private static Double RD = 1000.;
+	private static BigInteger RBI = new BigInteger("1000");
 	
 	public static void genDataE1RD() {
 		String file = "ficheros_generados/E1_RD.txt";
