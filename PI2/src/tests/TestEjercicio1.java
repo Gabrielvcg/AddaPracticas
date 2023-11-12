@@ -1,6 +1,5 @@
 package tests;
 
-import java.math.BigInteger;
 import java.util.List;
 import java.util.function.Function;
 
@@ -16,39 +15,34 @@ import us.lsi.graphics.MatPlotLib;
 
 public class TestEjercicio1 {
 	 
-	private static Integer nMin = 1000; // n mínimo para el cálculo de potencia
-	private static Integer nMax = 100000; // n máximo para el cálculo de potencia
-//	private static Integer nIncr = 1000; // incremento en los valores de n del cálculo de potencia
-	private static Integer nIncr = 3330; // incremento en los valores de n del cálculo de potencia
+	private static Integer nMin = 100; // n mínimo para el cálculo 
+	private static Integer nMax = 10000; // n máximo para el cálculo 
+	private static Integer nIncr = 100; // incremento en los valores de n del cálculo 
 	private static Integer nIter = 50; // número de iteraciones para cada medición de tiempo
-//	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
-	private static Integer nIterWarmup = 10000; // número de iteraciones para warmup
+	private static Integer nIterWarmup = 1000; // número de iteraciones para warmup
 	
 
-	private static Double RD = 1000.;
-	private static BigInteger RBI = new BigInteger("1000");
-	
 	public static void genDataE1RD() {
 		String file = "ficheros_generados/E1_RD.txt";
-		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1RecursivoD(RD));
+		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1RecursivoD(t));
 //		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	public static void genDataE1RBI() {
 		String file = "ficheros_generados/E1_RBI.txt";
-		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1RecursivoBI(RBI));
+		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1RecursivoBI(t));
 //		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	public static void genDataE1ITD() {
 		String file = "ficheros_generados/E1_ITD.txt";
-		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1IterativoD(RD));
+		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1IterativoD(t));
 //		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	public static void genDataE1ITBI() {
 		String file = "ficheros_generados/E1_ITBI.txt";
-		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1IterativoBI(RBI));
+		Function<Integer,Long> f1 = GenData.time(t -> Ejercicio1.ejercicio1IterativoBI(t));
 //		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}

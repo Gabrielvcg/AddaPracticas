@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class Ejercicio1 {
 
-	public static Double ejercicio1RecursivoD(Double a) {
+	public static Double ejercicio1RecursivoD(Integer a) {
 		Double ac;
 		if (a < 6) {
 			ac = 10.;
@@ -13,19 +13,19 @@ public class Ejercicio1 {
 		}
 		return ac;
 	}
+	
 
-	public static BigInteger ejercicio1RecursivoBI(BigInteger a) {
+	public static BigInteger ejercicio1RecursivoBI(Integer a) {
 		BigInteger ac;
-		BigInteger seis = new BigInteger("6");
-		if (a.compareTo(seis) == -1) {
+		if (a<6) {
 			ac = BigInteger.TEN;
 		} else {
-			ac = a.pow(3).multiply(ejercicio1RecursivoBI(a.subtract(BigInteger.ONE)));
-		}
+			  ac = BigInteger.valueOf((long) Math.pow(a, 3)).multiply(ejercicio1RecursivoBI(a - 1));		
+			 }
 		return ac;
 	}
 
-	public static Double ejercicio1IterativoD(Double a) {
+	public static Double ejercicio1IterativoD(Integer a) {
 		Double ac;
 
 		if (a < 6) {
@@ -39,17 +39,16 @@ public class Ejercicio1 {
 		}
 		return ac;
 	}
-	public static BigInteger ejercicio1IterativoBI(BigInteger a) {
+	public static BigInteger ejercicio1IterativoBI(Integer a) {
 		BigInteger ac;
-		BigInteger seis = new BigInteger("6");
 
-		if (a.compareTo(seis) == -1) {
+		if (a<6) {
 			ac = BigInteger.TEN;
 		} else {
 			ac = BigInteger.ONE;
-			while (a.compareTo(seis) != -1) {
-				ac =ac.multiply(a.pow(3));
-				a=a.subtract(BigInteger.ONE);
+			while (a>=6) {
+				ac =ac.multiply(BigInteger.valueOf((long) Math.pow(a, 3)));
+				a--;
 			}
 		}
 		return ac;
