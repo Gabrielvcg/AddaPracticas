@@ -96,10 +96,10 @@ public class TestEjercicio1 {
 	}
 	
 	public static void main(String[] args) {
-		genDataE1RD();
-		genDataE1RBI();
-		genDataE1ITD();
-		genDataE1ITBI();
+		//genDataE1RD();
+		//genDataE1RBI();
+	//	genDataE1ITD();
+	//	genDataE1ITBI();
 	
 		showE1RD();
 		showE1RBI();
