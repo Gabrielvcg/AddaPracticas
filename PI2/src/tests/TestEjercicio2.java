@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.math3.fitting.WeightedObservedPoint;
 
+import us.lsi.common.List2;
 import us.lsi.common.Pair;
 import us.lsi.curvefitting.DataFile;
 import us.lsi.curvefitting.Fit;
@@ -17,6 +18,8 @@ import us.lsi.curvefitting.GenData;
 import us.lsi.curvefitting.PowerLog;
 import us.lsi.graphics.MatPlotLib;
 import us.lsi.streams.Collectors2;
+import us.lsi.recursivos.problemasdelistas;
+
 
 
 public class TestEjercicio2 {
@@ -46,6 +49,13 @@ public class TestEjercicio2 {
 	 private static List<Integer> generarListaAleatoria(int tamano) {
 	        return new Random().ints(tamano).boxed().collect(Collectors.toList());
 	    }
+	 
+	 public static <E extends Comparable<? super E>> void mergeSort(List<E> lista, Integer umbral){
+			Comparator<? super E> ord = Comparator.naturalOrder();
+			List<E> ls = List2.ofCollection(lista);
+			mgSort(lista,0,lista.size(),ord,ls,umbral);	
+		}
+		
 	 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
