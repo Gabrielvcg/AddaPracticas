@@ -13,14 +13,14 @@ public class Ejercicio1 {
 		}
 		return ac;
 	}
-	
+
 
 	public static BigInteger ejercicio1RecursivoBI(Integer a) {
 		BigInteger ac;
 		if (a<6) {
 			ac = BigInteger.TEN;
 		} else {
-			  ac = BigInteger.valueOf((long) Math.pow(a, 3)).multiply(ejercicio1RecursivoBI(a - 1));		
+			  ac = BigInteger.valueOf((long) Math.pow(a, 3)).multiply(ejercicio1RecursivoBI(a - 1));
 			 }
 		return ac;
 	}
