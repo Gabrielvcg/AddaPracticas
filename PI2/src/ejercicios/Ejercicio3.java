@@ -28,7 +28,7 @@ public class Ejercicio3 {
 	
 	public static Boolean recursivo(BinaryTree<Character> tree, List<Character> ls, int i) {
 		Integer n = ls.size();
-		return switch (t) {
+		return switch (tree) {
 		case BEmpty<Character> t -> false;
 		case BLeaf<Character> t -> n - i == 1 && ls.get(i).equals(t.label());
 		case BTree<Character> t -> n - i > 0 && ls.get(i).equals(t.label())
